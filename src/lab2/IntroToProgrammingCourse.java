@@ -8,15 +8,16 @@ import javax.swing.*;
  * @author your name goes here
  * @version 1.00
  */
-public class IntroToProgrammingCourse {
+public class IntroToProgrammingCourse implements CourseInterface{
 
     private String courseName;
     private String courseNumber;
     private double credits;
 
-    public IntroToProgrammingCourse(String courseName, String courseNumber) {
-        this.setCourseName(courseName);
-        this.setCourseNumber(courseNumber);
+    public IntroToProgrammingCourse(String courseName, String courseNumber, double credits) {
+        this.courseName = courseName;
+        this.courseNumber = courseNumber;
+        this.credits = credits;
     }
 
     public String getCourseName() {
@@ -58,4 +59,12 @@ public class IntroToProgrammingCourse {
         this.credits = credits;
     }
 
+    @Override
+    public String toString() {
+        return "IntroToProgrammingCourse{" +
+                "courseName='" + courseName + '\'' +
+                ", courseNumber='" + courseNumber + '\'' +
+                ", credits=" + credits +
+                '}';
+    }
 }
